@@ -9,11 +9,11 @@
 //     }
 // }
 var fighters=[];
-fighters.push({hp:120,name:"Luke",att:6,newAtt:6,cap:12,iden:"fighter1"});
-fighters.push({hp:100,name:"Troop",att:8,newAtt:8,cap:10,iden:"fighter2"});
-fighters.push({hp:110,name:"Mace",att:7,newAtt:7,cap:11,iden:"fighter3"});
-fighters.push({hp:140,name:"Vader",att:4,newAtt:4,cap:14,iden:"fighter4"});
-fighters.push({hp:130,name:"Obi-Wan",att:5,newAtt:5,cap:13,iden:"fighter5"});
+fighters.push({hp:160,name:"Luke",att:6,newAtt:6,cap:12,iden:"fighter1"});
+fighters.push({hp:160,name:"Troop",att:8,newAtt:8,cap:10,iden:"fighter2"});
+fighters.push({hp:170,name:"Mace",att:7,newAtt:7,cap:11,iden:"fighter3"});
+fighters.push({hp:200,name:"Vader",att:4,newAtt:4,cap:14,iden:"fighter4"});
+fighters.push({hp:190,name:"Obi-Wan",att:5,newAtt:5,cap:13,iden:"fighter5"});
 $(document).ready(function () {
     //create fighters
 //     var fighter1 = new Fighter(120, 6, 12, "fighter1");
@@ -56,6 +56,7 @@ $(document).ready(function () {
                 var image = $("<img>").attr("src", source);
                 var iden = $(current).attr("id");
                 image.css({ "height": height, "width": width });
+                $("#defPic").show();
                 $("#defPic").attr("check", "true");
                 $("#defPic").attr("iden", iden);
                 //console.log(source);
@@ -73,15 +74,16 @@ $(document).ready(function () {
             //fight
             var f1 = $("#attPic").attr("iden");
             var f2 = $("#defPic").attr("iden");
+            console.log(f1,f2);
             var activeAtt=0;
             var activeDef=0;
             for(i=0;i<fighters.length;i++)
             {
-                if(f1==fighters[0].iden)
+                if(f1==fighters[i].iden)
                 {
                     activeAtt=i;
                 }
-                if(f2==fighters[0].iden)
+                if(f2==fighters[i].iden)
                 {
                     activeDef=i;
                 }
@@ -100,6 +102,13 @@ $(document).ready(function () {
             if(fighters[activeAtt].hp<=0)
             {
                 $(".message-area").text("You Lose");
+            }
+            if(fighters[activeDef].hp<=0)
+            {
+                $("#defPic").empty();
+                $("#defPic").attr("check", false);
+                $("#defHP").text("");
+                activeDef=null;
             }
             //console.log(f2);
             //$("#attPic").append(f1.hp);
