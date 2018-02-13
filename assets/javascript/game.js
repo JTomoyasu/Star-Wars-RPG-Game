@@ -9,11 +9,11 @@
 //     }
 // }
 var fighters = [];
-fighters.push({ hp: 160, name: "Luke", att: 9, newAtt: 6, cap: 10, iden: "fighter1" });
-fighters.push({ hp: 160, name: "Troop", att: 11, newAtt: 8, cap: 8, iden: "fighter2" });
-fighters.push({ hp: 170, name: "Mace", att: 10, newAtt: 7, cap: 9, iden: "fighter3" });
-fighters.push({ hp: 200, name: "Vader", att: 7, newAtt: 4, cap: 12, iden: "fighter4" });
-fighters.push({ hp: 190, name: "Obi-Wan", att: 8, newAtt: 5, cap: 11, iden: "fighter5" });
+fighters.push({ hp: 140, name: "Luke", att: 7, newAtt: 7, cap: 10, iden: "fighter1" });
+fighters.push({ hp: 130, name: "Troop", att: 9, newAtt: 9, cap: 8, iden: "fighter2" });
+fighters.push({ hp: 150, name: "Mace", att: 8, newAtt: 8, cap: 9, iden: "fighter3" });
+fighters.push({ hp: 180, name: "Vader", att: 6, newAtt: 6, cap: 12, iden: "fighter4" });
+fighters.push({ hp: 170, name: "Obi-Wan", att: 6, newAtt: 6, cap: 11, iden: "fighter5" });
 function isWinner() {
     var count = 0;
     for (i = 0; i < fighters.length; i++) {
