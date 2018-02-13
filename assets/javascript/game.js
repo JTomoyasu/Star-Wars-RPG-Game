@@ -96,6 +96,11 @@ $(document).ready(function () {
             fighters[activeAtt].att+=fighters[activeAtt].newAtt;
             $("#attHP").text(fighters[activeAtt].hp);
             $("#defHP").text(fighters[activeDef].hp);
+            $(".message-area").text("You attacked "+fighters[activeDef].name+" for "+fighters[activeAtt].att+" damage and recieved "+fighters[activeDef].cap+" damage");
+            if(fighters[activeAtt].hp<=0)
+            {
+                $(".message-area").text("You Lose");
+            }
             //console.log(f2);
             //$("#attPic").append(f1.hp);
             // if (f1 == "fighter1") {
