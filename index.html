@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
     <title>Star Wars Fan RPG Game</title>
 </head>
 
@@ -14,53 +21,49 @@
     <div class="jumbotron">
         <h1 class="text-center">Star Wars Game
         </h1>
-        <h3 class="message-area">
+        <h3 class="text-center message-area">
         </h3>
     </div>
+    <button type=button id=attack class="btn btn-group-justified" style="text-align:center">
+        Attack
+    </button>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div>
-                            Character Area
-                        </div>
-                        <img src="assets\skywalker_luke.jpg" alt="" id ="char1" height="100" width="auto">
-                        <br>
-                        <img src="assets\Obi-Wan.jpg" alt="" height="100" width="auto">
-                        <br>
-                        <img src="assets\Mace_Windu.jpg" alt="" height="100" width="auto">
-                    </div>
-                    <div class="col-lg-6">
-                        <div>
-                            Attacker Area
-                        </div>
-                    </div>
+            <div class="col-lg-4">
+                <div>
+                    Character Area
                 </div>
+                <img src="assets\images\skywalker_luke.jpg" alt="" id="fighter1" class="fighter" "img-thumbnail" height="100" width="100">
+                <br>
+                <img src="assets\images\Obi-Wan.jpg" alt="" id="fighter2" class="fighter" "img-thumbnail" height="100" width="auto">
+                <br>
+                <img src="assets\images\Mace_Windu.jpg" alt="" id="fighter3" class="fighter" "img-thumbnail" height="auto" width="100">
+                <br>
+                <img src="assets\images\darth vader.jpg" alt="" id="fighter4" class="fighter" "img-thumbnail" height="100" width="auto">
+                <br>
+                <img src="assets\images\Stormtrooper1.jpg" alt="" id="fighter5" class="fighter" "img-thumbnail" height="100" width="auto">
+                <!-- <br>
+                <img src="assets\Battle_Droid.png" alt="" id="player6" class="fighter" "img-thumbnail" height="auto" width="100"> -->
             </div>
-            <div class="col-lg-6">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div>
-                            Defender Area
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div>
-                            Opponents
-                        </div>
-                        <img src="assets\darth vader.jpg" alt="" height="100" width="auto">
-                        <br>
-                        <img src="assets\Stormtrooper.png" alt="" height="100" width="auto">
-                        <br>
-                        <img src="assets\Battle_Droid.png" alt="" height="100" width="auto">
-                    </div>
+            <div class="col-lg-4">
+                <div>
+                    Attacker Area
                 </div>
+                <span id="attPic">
+
+                </span>
+            </div>
+            <div class="col-lg-4">
+                <div>
+                    Defender Area
+                </div>
+                <span id="defPic">
+
+                </span>
             </div>
         </div>
     </div>
-
-    <script src="game.js">
+    <script src="assets\javascript\game.js">
     </script>
 </body>
 
