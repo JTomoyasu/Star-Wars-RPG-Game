@@ -15,14 +15,12 @@ fighters.push({ hp: 170, name: "Mace", att: 10, newAtt: 7, cap: 9, iden: "fighte
 fighters.push({ hp: 200, name: "Vader", att: 7, newAtt: 4, cap: 12, iden: "fighter4" });
 fighters.push({ hp: 190, name: "Obi-Wan", att: 8, newAtt: 5, cap: 11, iden: "fighter5" });
 function isWinner() {
-    var count=0;
+    var count = 0;
     for (i = 0; i < fighters.length; i++) {
-        if(fighters[i].hp>=0)
-        {
+        if (fighters[i].hp >= 0) {
             count++;
         }
-        if(count>1)
-        {
+        if (count > 1) {
             return false;
         }
     }
@@ -88,7 +86,7 @@ $(document).ready(function () {
             //fight
             var f1 = $("#attPic").attr("iden");
             var f2 = $("#defPic").attr("iden");
-            console.log(f1, f2);
+            //console.log(f1, f2);
             var activeAtt = 0;
             var activeDef = 0;
             for (i = 0; i < fighters.length; i++) {
@@ -118,8 +116,7 @@ $(document).ready(function () {
                 $("#defPic").attr("check", false);
                 $("#defHP").text("");
                 activeDef = null;
-                if(isWinner())
-                {
+                if (isWinner()) {
                     $(".message-area").text("You Win");
                 }
             }
